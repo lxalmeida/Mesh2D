@@ -1,0 +1,222 @@
+\hypertarget{classHalo}{
+\section{Referência da Classe Halo}
+\label{classHalo}\index{Halo@{Halo}}
+}
+
+
+{\ttfamily \#include $<$halo.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHalo_adab5e53317b1cf32558d66a1b8052ea0}{Halo} (int halo\_\-size, int num\_\-halos)
+\begin{DoxyCompactList}\small\item\em Construtor do \hyperlink{classHalo}{Halo}, não sobrepondo-\/o com nenhum vizinho. \item\end{DoxyCompactList}\item 
+\hyperlink{classHalo_a9769c8e449f3e4ea6cd8a398a2ad45d8}{Halo} (int halo\_\-size, int num\_\-halos, int rank\_\-neighbor, int direction\_\-tag, MPI\_\-Comm comm)
+\begin{DoxyCompactList}\small\item\em Construtor do \hyperlink{classHalo}{Halo}, sobrepondo-\/o com o vizinho de rank rank\_\-neighbor. \item\end{DoxyCompactList}\item 
+\hyperlink{classHalo_af14b14344802b6c82d9099f49b74b004}{$\sim$Halo} ()
+\begin{DoxyCompactList}\small\item\em Destrutor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classHalo_a38eff5fb365854da750295ffb7bcab39}{set\_\-neighbor\_\-info} (int rank\_\-neighbor, int direction\_\-tag, MPI\_\-Comm comm)
+\begin{DoxyCompactList}\small\item\em Sobrepõe o \hyperlink{classHalo}{Halo} com um vizinho. \item\end{DoxyCompactList}\item 
+int \hyperlink{classHalo_a9582022dcf67b5ae988b322fa528e782}{get\_\-neighbor\_\-rank} (void)
+\begin{DoxyCompactList}\small\item\em Devolve o rank do vizinho. \item\end{DoxyCompactList}\item 
+int \hyperlink{classHalo_ae19759b97579ff67e8503cb46a69d786}{get\_\-halo\_\-size} (void)
+\begin{DoxyCompactList}\small\item\em Devolve o tamanho do \hyperlink{classHalo}{Halo}. \item\end{DoxyCompactList}\item 
+int \hyperlink{classHalo_ae432b6c70a8146d6e03863928e3c9bd8}{get\_\-num\_\-halos} (void)
+\begin{DoxyCompactList}\small\item\em Devolve o número de Halos. \item\end{DoxyCompactList}\item 
+int \hyperlink{classHalo_a8e4ee7b51272939a0ffeae9dc7f364d8}{get\_\-num\_\-elements} (void)
+\begin{DoxyCompactList}\small\item\em Devolve o número de elementos do \hyperlink{classHalo}{Halo}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classHalo_af6ec299cf31527dea4a92f994ed2c458}{init\_\-update} (void)
+\begin{DoxyCompactList}\small\item\em Inicia o recebimento assíncrono da borda do vizinho. \item\end{DoxyCompactList}\item 
+void \hyperlink{classHalo_aff104eacb831738e61d54855a3259b37}{sync} (void)
+\begin{DoxyCompactList}\small\item\em Espera pela conclusão do init\_\-update. \item\end{DoxyCompactList}\item 
+double \& \hyperlink{classHalo_a24173356d80c075ce91c0efa4ec2796c}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\begin{DoxyCompactList}\small\item\em Acessa as posições da \hyperlink{classHalo}{Halo}, a fim de possibilitar o cálculo das bordas dos subdomínios. \item\end{DoxyCompactList}\item 
+double \hyperlink{classHalo_ab448a5a0de13574527ca06653d05e049}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\begin{DoxyCompactList}\small\item\em Acessa as posições da \hyperlink{classHalo}{Halo} em um contexto const. \item\end{DoxyCompactList}\item 
+void \hyperlink{classHalo_a3db72b220e013aeb89be9b295f3def39}{print\_\-to\_\-file} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Faz o dump dos dados da \hyperlink{classHalo}{Halo} para o arquivo de nome filename. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe \hyperlink{classHalo}{Halo}, que abstrai as regiões de sobreposição entre os subdomínios. 
+
+\subsection{Construtores \& Destrutores}
+\hypertarget{classHalo_adab5e53317b1cf32558d66a1b8052ea0}{
+\index{Halo@{Halo}!Halo@{Halo}}
+\index{Halo@{Halo}!Halo@{Halo}}
+\subsubsection[{Halo}]{\setlength{\rightskip}{0pt plus 5cm}Halo::Halo (int {\em halo\_\-size}, \/  int {\em num\_\-halos})}}
+\label{classHalo_adab5e53317b1cf32558d66a1b8052ea0}
+
+
+Construtor do \hyperlink{classHalo}{Halo}, não sobrepondo-\/o com nenhum vizinho. 
+
+Este construtor pode ser utilizado para instanciar um \hyperlink{classHalo}{Halo} externo ao domínio, isso é, uma região de sobreposição mais externa da malha, não sobreposta com ninguém. A sobreposição pode ser feita de forma tardia, por meio do método set\_\-neighbor\_\-info.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em halo\_\-size}]Tamanho do \hyperlink{classHalo}{Halo}. \item[\mbox{$\leftarrow$} {\em num\_\-halos}]Número de Halos. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\hypertarget{classHalo_a9769c8e449f3e4ea6cd8a398a2ad45d8}{
+\index{Halo@{Halo}!Halo@{Halo}}
+\index{Halo@{Halo}!Halo@{Halo}}
+\subsubsection[{Halo}]{\setlength{\rightskip}{0pt plus 5cm}Halo::Halo (int {\em halo\_\-size}, \/  int {\em num\_\-halos}, \/  int {\em rank\_\-neighbor}, \/  int {\em direction\_\-tag}, \/  MPI\_\-Comm {\em comm})}}
+\label{classHalo_a9769c8e449f3e4ea6cd8a398a2ad45d8}
+
+
+Construtor do \hyperlink{classHalo}{Halo}, sobrepondo-\/o com o vizinho de rank rank\_\-neighbor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em halo\_\-size}]Tamanho do \hyperlink{classHalo}{Halo}. \item[\mbox{$\leftarrow$} {\em num\_\-halos}]Número de Halos. \item[\mbox{$\leftarrow$} {\em rank\_\-neighbor}]Rank do vizinho com o qual ele sobrepõe-\/se. \item[\mbox{$\leftarrow$} {\em direction\_\-tag}]Tag utilizado para receber a borda do vizinho. \item[\mbox{$\leftarrow$} {\em comm}]Comunicador MPI. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\hypertarget{classHalo_af14b14344802b6c82d9099f49b74b004}{
+\index{Halo@{Halo}!$\sim$Halo@{$\sim$Halo}}
+\index{$\sim$Halo@{$\sim$Halo}!Halo@{Halo}}
+\subsubsection[{$\sim$Halo}]{\setlength{\rightskip}{0pt plus 5cm}Halo::$\sim$Halo ()}}
+\label{classHalo_af14b14344802b6c82d9099f49b74b004}
+
+
+Destrutor. 
+
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+
+
+\subsection{Métodos}
+\hypertarget{classHalo_ae19759b97579ff67e8503cb46a69d786}{
+\index{Halo@{Halo}!get\_\-halo\_\-size@{get\_\-halo\_\-size}}
+\index{get\_\-halo\_\-size@{get\_\-halo\_\-size}!Halo@{Halo}}
+\subsubsection[{get\_\-halo\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int Halo::get\_\-halo\_\-size (void)}}
+\label{classHalo_ae19759b97579ff67e8503cb46a69d786}
+
+
+Devolve o tamanho do \hyperlink{classHalo}{Halo}. 
+
+\begin{DoxyReturn}{Retorna}
+Tamanho do \hyperlink{classHalo}{Halo}. 
+\end{DoxyReturn}
+\hypertarget{classHalo_a9582022dcf67b5ae988b322fa528e782}{
+\index{Halo@{Halo}!get\_\-neighbor\_\-rank@{get\_\-neighbor\_\-rank}}
+\index{get\_\-neighbor\_\-rank@{get\_\-neighbor\_\-rank}!Halo@{Halo}}
+\subsubsection[{get\_\-neighbor\_\-rank}]{\setlength{\rightskip}{0pt plus 5cm}int Halo::get\_\-neighbor\_\-rank (void)}}
+\label{classHalo_a9582022dcf67b5ae988b322fa528e782}
+
+
+Devolve o rank do vizinho. 
+
+\begin{DoxyReturn}{Retorna}
+Rank do vizinho. 
+\end{DoxyReturn}
+\hypertarget{classHalo_a8e4ee7b51272939a0ffeae9dc7f364d8}{
+\index{Halo@{Halo}!get\_\-num\_\-elements@{get\_\-num\_\-elements}}
+\index{get\_\-num\_\-elements@{get\_\-num\_\-elements}!Halo@{Halo}}
+\subsubsection[{get\_\-num\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}int Halo::get\_\-num\_\-elements (void)}}
+\label{classHalo_a8e4ee7b51272939a0ffeae9dc7f364d8}
+
+
+Devolve o número de elementos do \hyperlink{classHalo}{Halo}. 
+
+O número de elementos é a multiplicação entre o número de Halos e o tamanho da \hyperlink{classHalo}{Halo}.
+
+\begin{DoxyReturn}{Retorna}
+Número de elementos. 
+\end{DoxyReturn}
+\hypertarget{classHalo_ae432b6c70a8146d6e03863928e3c9bd8}{
+\index{Halo@{Halo}!get\_\-num\_\-halos@{get\_\-num\_\-halos}}
+\index{get\_\-num\_\-halos@{get\_\-num\_\-halos}!Halo@{Halo}}
+\subsubsection[{get\_\-num\_\-halos}]{\setlength{\rightskip}{0pt plus 5cm}int Halo::get\_\-num\_\-halos (void)}}
+\label{classHalo_ae432b6c70a8146d6e03863928e3c9bd8}
+
+
+Devolve o número de Halos. 
+
+\begin{DoxyReturn}{Retorna}
+Número de Halos. 
+\end{DoxyReturn}
+\hypertarget{classHalo_af6ec299cf31527dea4a92f994ed2c458}{
+\index{Halo@{Halo}!init\_\-update@{init\_\-update}}
+\index{init\_\-update@{init\_\-update}!Halo@{Halo}}
+\subsubsection[{init\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}void Halo::init\_\-update (void)}}
+\label{classHalo_af6ec299cf31527dea4a92f994ed2c458}
+
+
+Inicia o recebimento assíncrono da borda do vizinho. 
+
+O recebimento é feito por meio da primitiva MPI\_\-Irecv, que espera uma mensagem do vizinho informado ou no momento da instanciação do \hyperlink{classHalo}{Halo} ou no momento da chamada ao método set\_\-neighbor\_\-info. A mensagem é aguardada com o tag e o comunicador passados por parâmetros. \hypertarget{classHalo_ab448a5a0de13574527ca06653d05e049}{
+\index{Halo@{Halo}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Halo@{Halo}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}double Halo::operator\mbox{[}$\,$\mbox{]} (int {\em i}) const}}
+\label{classHalo_ab448a5a0de13574527ca06653d05e049}
+
+
+Acessa as posições da \hyperlink{classHalo}{Halo} em um contexto const. 
+
+As posições acessadas são sempre as últimas do array bidimensional que armazena os dados da \hyperlink{classHalo}{Halo}. Se houverem múltiplas Halos e for necessário o cálculo desses pontos sobrepostos, é apenas a \hyperlink{classHalo}{Halo} mais próxima da borda do subdomínio que deverá ser utilizada pelo processo.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em i}]Índice. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor contido na posição do vetor. 
+\end{DoxyReturn}
+\hypertarget{classHalo_a24173356d80c075ce91c0efa4ec2796c}{
+\index{Halo@{Halo}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Halo@{Halo}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}double \& Halo::operator\mbox{[}$\,$\mbox{]} (int {\em i})}}
+\label{classHalo_a24173356d80c075ce91c0efa4ec2796c}
+
+
+Acessa as posições da \hyperlink{classHalo}{Halo}, a fim de possibilitar o cálculo das bordas dos subdomínios. 
+
+As posições acessadas são sempre as últimas do array bidimensional que armazena os dados da \hyperlink{classHalo}{Halo}. Se houverem múltiplas Halos e for necessário o cálculo desses pontos sobrepostos, é apenas a \hyperlink{classHalo}{Halo} mais próxima da borda do subdomínio que deverá ser utilizada pelo processo.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em i}]Índice. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência da posição do vetor. 
+\end{DoxyReturn}
+\hypertarget{classHalo_a3db72b220e013aeb89be9b295f3def39}{
+\index{Halo@{Halo}!print\_\-to\_\-file@{print\_\-to\_\-file}}
+\index{print\_\-to\_\-file@{print\_\-to\_\-file}!Halo@{Halo}}
+\subsubsection[{print\_\-to\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void Halo::print\_\-to\_\-file (const char $\ast$ {\em filename})}}
+\label{classHalo_a3db72b220e013aeb89be9b295f3def39}
+
+
+Faz o dump dos dados da \hyperlink{classHalo}{Halo} para o arquivo de nome filename. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em filename}]Nome do arquivo. \end{DoxyParams}
+\hypertarget{classHalo_a38eff5fb365854da750295ffb7bcab39}{
+\index{Halo@{Halo}!set\_\-neighbor\_\-info@{set\_\-neighbor\_\-info}}
+\index{set\_\-neighbor\_\-info@{set\_\-neighbor\_\-info}!Halo@{Halo}}
+\subsubsection[{set\_\-neighbor\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void Halo::set\_\-neighbor\_\-info (int {\em rank\_\-neighbor}, \/  int {\em direction\_\-tag}, \/  MPI\_\-Comm {\em comm})}}
+\label{classHalo_a38eff5fb365854da750295ffb7bcab39}
+
+
+Sobrepõe o \hyperlink{classHalo}{Halo} com um vizinho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em rank\_\-neighbor}]Rank do vizinho. \item[\mbox{$\leftarrow$} {\em direction\_\-tag}]Tag da mensagem. \item[\mbox{$\leftarrow$} {\em comm}]Comunicador MPI. \end{DoxyParams}
+\hypertarget{classHalo_aff104eacb831738e61d54855a3259b37}{
+\index{Halo@{Halo}!sync@{sync}}
+\index{sync@{sync}!Halo@{Halo}}
+\subsubsection[{sync}]{\setlength{\rightskip}{0pt plus 5cm}void Halo::sync (void)}}
+\label{classHalo_aff104eacb831738e61d54855a3259b37}
+
+
+Espera pela conclusão do init\_\-update. 
+
+O método invoca a primitiva MPI\_\-Wait a fim de bloquear o processo e garantir a conclusão do MPI\_\-Irecv, disparado pelo init\_\-update. 
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/halo.h\item 
+src/mesh2d/ghost\_\-zones/halo.cpp\end{DoxyCompactItemize}

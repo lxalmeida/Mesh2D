@@ -1,0 +1,15 @@
+# Caminho do diretório da aplicação.
+# Altere para o caminho do projeto.
+MESH2D=${HOME}/Desenv/progpar/mpi/mesh2d
+
+# Compilador e flags de compilação.
+# Altere conforme necessário.
+CPP=g++
+MPICPP=mpicxx
+#CPP_FLAGS=-ansi -Wall -O2
+CPP_FLAGS=-ansi -Wall -O2
+LD_FLAGS=-lm
+
+# Isso não precisa ser alterado
+OBJ_PATH=${MESH2D}/obj
+

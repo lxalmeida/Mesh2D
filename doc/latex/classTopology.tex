@@ -1,0 +1,70 @@
+\hypertarget{classTopology}{
+\section{Referência da Classe Topology}
+\label{classTopology}\index{Topology@{Topology}}
+}
+
+
+Classe que abstrai uma topologia cartesiana MPI bidimensional.  
+
+
+
+
+{\ttfamily \#include $<$topology.h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTopology_a742b5acc35a4e2759336f27fc939e3fa}{
+{\bfseries Topology} (int ndims, int periods\mbox{[}$\,$\mbox{]}=NULL, int reorder=0, MPI\_\-Comm comm\_\-old=MPI\_\-COMM\_\-WORLD)}
+\label{classTopology_a742b5acc35a4e2759336f27fc939e3fa}
+
+\item 
+\hypertarget{classTopology_aff6ac77fcbcceb73616d2bdad564357d}{
+MPI\_\-Comm {\bfseries get\_\-comm} (void)}
+\label{classTopology_aff6ac77fcbcceb73616d2bdad564357d}
+
+\item 
+\hypertarget{classTopology_a064d933db9fd96873120d79f235598f5}{
+int {\bfseries get\_\-rank} (void)}
+\label{classTopology_a064d933db9fd96873120d79f235598f5}
+
+\item 
+\hypertarget{classTopology_a089f1aa776a905fefaeaa84d2844ba85}{
+int {\bfseries get\_\-nprocs} (void)}
+\label{classTopology_a089f1aa776a905fefaeaa84d2844ba85}
+
+\item 
+\hypertarget{classTopology_a21ec1e654837bcedf60aa46fc41d6982}{
+int {\bfseries get\_\-ndims} (void)}
+\label{classTopology_a21ec1e654837bcedf60aa46fc41d6982}
+
+\item 
+\hypertarget{classTopology_a08ab8e6629ffb7623acfbd7344d7997a}{
+struct \hyperlink{structdims}{dims} {\bfseries get\_\-dims} (void)}
+\label{classTopology_a08ab8e6629ffb7623acfbd7344d7997a}
+
+\item 
+\hypertarget{classTopology_a694f2c2613745e792588e21d7501f3bf}{
+struct \hyperlink{structcoords}{coords} {\bfseries get\_\-coords} (void)}
+\label{classTopology_a694f2c2613745e792588e21d7501f3bf}
+
+\item 
+\hypertarget{classTopology_a25656f686f011250380f9122d0065cc5}{
+\hyperlink{classneighbors__iterator}{neighbors\_\-iterator} {\bfseries first\_\-neighbor} (void)}
+\label{classTopology_a25656f686f011250380f9122d0065cc5}
+
+\item 
+\hypertarget{classTopology_a83cada2ba567209dc30995895ee3ba94}{
+\hyperlink{classneighbors__iterator}{neighbors\_\-iterator} {\bfseries last\_\-neighbor} (void)}
+\label{classTopology_a83cada2ba567209dc30995895ee3ba94}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe que abstrai uma topologia cartesiana MPI bidimensional. 
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/topology.h\item 
+src/topology/topology.cpp\end{DoxyCompactItemize}

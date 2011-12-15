@@ -1,0 +1,15 @@
+Para compilar:
+    Antes de compilar com make all, edite Makefile.common e ajuste a variável
+    MESH2D com o caminho do diretório da aplicação. Especifique
+    também o compilador em MPICC, se necessário.
+
+Para executar:
+    Após compilar, o binário estará em $MESH2D/bin e se chamará poisson2d.
+    Portanto, para executar a aplicação com 6 processos e uma malha de
+    250 x 250, limitando o algoritmo a um máximo de 100000 iterações:
+
+    $ mpirun -np 6 bin/./poisson2d 250 250 100000
+
+    Obs.: Assume-se que uma biblioteca MPI esteja devidamente instalada,
+          e que o MPI tenha sido inicializado nos nós do cluster (se necessário).
+

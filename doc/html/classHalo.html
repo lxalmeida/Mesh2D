@@ -1,0 +1,474 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>poisson_2d: Referência da Classe Halo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Gerado por Doxygen 1.6.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;Principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Busca" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;Componentes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;Membros</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referência da Classe Halo</h1><!-- doxytag: class="Halo" -->
+<p><code>#include &lt;<a class="el" href="halo_8h_source.html">halo.h</a>&gt;</code></p>
+
+<p><a href="classHalo-members.html">Lista de todos os Membros.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Métodos Públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#adab5e53317b1cf32558d66a1b8052ea0">Halo</a> (int halo_size, int num_halos)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor do <a class="el" href="classHalo.html">Halo</a>, não sobrepondo-o com nenhum vizinho.  <a href="#adab5e53317b1cf32558d66a1b8052ea0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a9769c8e449f3e4ea6cd8a398a2ad45d8">Halo</a> (int halo_size, int num_halos, int rank_neighbor, int direction_tag, MPI_Comm comm)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor do <a class="el" href="classHalo.html">Halo</a>, sobrepondo-o com o vizinho de rank rank_neighbor.  <a href="#a9769c8e449f3e4ea6cd8a398a2ad45d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#af14b14344802b6c82d9099f49b74b004">~Halo</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destrutor.  <a href="#af14b14344802b6c82d9099f49b74b004"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a38eff5fb365854da750295ffb7bcab39">set_neighbor_info</a> (int rank_neighbor, int direction_tag, MPI_Comm comm)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sobrepõe o <a class="el" href="classHalo.html">Halo</a> com um vizinho.  <a href="#a38eff5fb365854da750295ffb7bcab39"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a9582022dcf67b5ae988b322fa528e782">get_neighbor_rank</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devolve o rank do vizinho.  <a href="#a9582022dcf67b5ae988b322fa528e782"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#ae19759b97579ff67e8503cb46a69d786">get_halo_size</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devolve o tamanho do <a class="el" href="classHalo.html">Halo</a>.  <a href="#ae19759b97579ff67e8503cb46a69d786"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#ae432b6c70a8146d6e03863928e3c9bd8">get_num_halos</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devolve o número de Halos.  <a href="#ae432b6c70a8146d6e03863928e3c9bd8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a8e4ee7b51272939a0ffeae9dc7f364d8">get_num_elements</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devolve o número de elementos do <a class="el" href="classHalo.html">Halo</a>.  <a href="#a8e4ee7b51272939a0ffeae9dc7f364d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#af6ec299cf31527dea4a92f994ed2c458">init_update</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicia o recebimento assíncrono da borda do vizinho.  <a href="#af6ec299cf31527dea4a92f994ed2c458"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#aff104eacb831738e61d54855a3259b37">sync</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espera pela conclusão do init_update.  <a href="#aff104eacb831738e61d54855a3259b37"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a24173356d80c075ce91c0efa4ec2796c">operator[]</a> (int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acessa as posições da <a class="el" href="classHalo.html">Halo</a>, a fim de possibilitar o cálculo das bordas dos subdomínios.  <a href="#a24173356d80c075ce91c0efa4ec2796c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#ab448a5a0de13574527ca06653d05e049">operator[]</a> (int i) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acessa as posições da <a class="el" href="classHalo.html">Halo</a> em um contexto const.  <a href="#ab448a5a0de13574527ca06653d05e049"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHalo.html#a3db72b220e013aeb89be9b295f3def39">print_to_file</a> (const char *filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Faz o dump dos dados da <a class="el" href="classHalo.html">Halo</a> para o arquivo de nome filename.  <a href="#a3db72b220e013aeb89be9b295f3def39"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição Detalhada</h2>
+<p>Classe <a class="el" href="classHalo.html">Halo</a>, que abstrai as regiões de sobreposição entre os subdomínios. </p>
+<hr/><h2>Construtores &amp; Destrutores</h2>
+<a class="anchor" id="adab5e53317b1cf32558d66a1b8052ea0"></a><!-- doxytag: member="Halo::Halo" ref="adab5e53317b1cf32558d66a1b8052ea0" args="(int halo_size, int num_halos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Halo::Halo </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>halo_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>num_halos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor do <a class="el" href="classHalo.html">Halo</a>, não sobrepondo-o com nenhum vizinho. </p>
+<p>Este construtor pode ser utilizado para instanciar um <a class="el" href="classHalo.html">Halo</a> externo ao domínio, isso é, uma região de sobreposição mais externa da malha, não sobreposta com ninguém. A sobreposição pode ser feita de forma tardia, por meio do método set_neighbor_info.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>halo_size</em>&nbsp;</td><td>Tamanho do <a class="el" href="classHalo.html">Halo</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>num_halos</em>&nbsp;</td><td>Número de Halos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9769c8e449f3e4ea6cd8a398a2ad45d8"></a><!-- doxytag: member="Halo::Halo" ref="a9769c8e449f3e4ea6cd8a398a2ad45d8" args="(int halo_size, int num_halos, int rank_neighbor, int direction_tag, MPI_Comm comm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Halo::Halo </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>halo_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>num_halos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>rank_neighbor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>direction_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&nbsp;</td>
+          <td class="paramname"> <em>comm</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor do <a class="el" href="classHalo.html">Halo</a>, sobrepondo-o com o vizinho de rank rank_neighbor. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>halo_size</em>&nbsp;</td><td>Tamanho do <a class="el" href="classHalo.html">Halo</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>num_halos</em>&nbsp;</td><td>Número de Halos. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rank_neighbor</em>&nbsp;</td><td>Rank do vizinho com o qual ele sobrepõe-se. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>direction_tag</em>&nbsp;</td><td>Tag utilizado para receber a borda do vizinho. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>comm</em>&nbsp;</td><td>Comunicador MPI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af14b14344802b6c82d9099f49b74b004"></a><!-- doxytag: member="Halo::~Halo" ref="af14b14344802b6c82d9099f49b74b004" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Halo::~Halo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Destrutor. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/><h2>Métodos</h2>
+<a class="anchor" id="ae19759b97579ff67e8503cb46a69d786"></a><!-- doxytag: member="Halo::get_halo_size" ref="ae19759b97579ff67e8503cb46a69d786" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Halo::get_halo_size </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Devolve o tamanho do <a class="el" href="classHalo.html">Halo</a>. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Tamanho do <a class="el" href="classHalo.html">Halo</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9582022dcf67b5ae988b322fa528e782"></a><!-- doxytag: member="Halo::get_neighbor_rank" ref="a9582022dcf67b5ae988b322fa528e782" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Halo::get_neighbor_rank </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Devolve o rank do vizinho. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Rank do vizinho. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e4ee7b51272939a0ffeae9dc7f364d8"></a><!-- doxytag: member="Halo::get_num_elements" ref="a8e4ee7b51272939a0ffeae9dc7f364d8" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Halo::get_num_elements </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Devolve o número de elementos do <a class="el" href="classHalo.html">Halo</a>. </p>
+<p>O número de elementos é a multiplicação entre o número de Halos e o tamanho da <a class="el" href="classHalo.html">Halo</a>.</p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Número de elementos. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae432b6c70a8146d6e03863928e3c9bd8"></a><!-- doxytag: member="Halo::get_num_halos" ref="ae432b6c70a8146d6e03863928e3c9bd8" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Halo::get_num_halos </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Devolve o número de Halos. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Número de Halos. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af6ec299cf31527dea4a92f994ed2c458"></a><!-- doxytag: member="Halo::init_update" ref="af6ec299cf31527dea4a92f994ed2c458" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Halo::init_update </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Inicia o recebimento assíncrono da borda do vizinho. </p>
+<p>O recebimento é feito por meio da primitiva MPI_Irecv, que espera uma mensagem do vizinho informado ou no momento da instanciação do <a class="el" href="classHalo.html">Halo</a> ou no momento da chamada ao método set_neighbor_info. A mensagem é aguardada com o tag e o comunicador passados por parâmetros. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab448a5a0de13574527ca06653d05e049"></a><!-- doxytag: member="Halo::operator[]" ref="ab448a5a0de13574527ca06653d05e049" args="(int i) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Halo::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Acessa as posições da <a class="el" href="classHalo.html">Halo</a> em um contexto const. </p>
+<p>As posições acessadas são sempre as últimas do array bidimensional que armazena os dados da <a class="el" href="classHalo.html">Halo</a>. Se houverem múltiplas Halos e for necessário o cálculo desses pontos sobrepostos, é apenas a <a class="el" href="classHalo.html">Halo</a> mais próxima da borda do subdomínio que deverá ser utilizada pelo processo.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>i</em>&nbsp;</td><td>Índice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Valor contido na posição do vetor. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24173356d80c075ce91c0efa4ec2796c"></a><!-- doxytag: member="Halo::operator[]" ref="a24173356d80c075ce91c0efa4ec2796c" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double &amp; Halo::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Acessa as posições da <a class="el" href="classHalo.html">Halo</a>, a fim de possibilitar o cálculo das bordas dos subdomínios. </p>
+<p>As posições acessadas são sempre as últimas do array bidimensional que armazena os dados da <a class="el" href="classHalo.html">Halo</a>. Se houverem múltiplas Halos e for necessário o cálculo desses pontos sobrepostos, é apenas a <a class="el" href="classHalo.html">Halo</a> mais próxima da borda do subdomínio que deverá ser utilizada pelo processo.</p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>i</em>&nbsp;</td><td>Índice. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Referência da posição do vetor. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3db72b220e013aeb89be9b295f3def39"></a><!-- doxytag: member="Halo::print_to_file" ref="a3db72b220e013aeb89be9b295f3def39" args="(const char *filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Halo::print_to_file </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Faz o dump dos dados da <a class="el" href="classHalo.html">Halo</a> para o arquivo de nome filename. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filename</em>&nbsp;</td><td>Nome do arquivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a38eff5fb365854da750295ffb7bcab39"></a><!-- doxytag: member="Halo::set_neighbor_info" ref="a38eff5fb365854da750295ffb7bcab39" args="(int rank_neighbor, int direction_tag, MPI_Comm comm)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Halo::set_neighbor_info </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>rank_neighbor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>direction_tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&nbsp;</td>
+          <td class="paramname"> <em>comm</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sobrepõe o <a class="el" href="classHalo.html">Halo</a> com um vizinho. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rank_neighbor</em>&nbsp;</td><td>Rank do vizinho. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>direction_tag</em>&nbsp;</td><td>Tag da mensagem. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>comm</em>&nbsp;</td><td>Comunicador MPI. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aff104eacb831738e61d54855a3259b37"></a><!-- doxytag: member="Halo::sync" ref="aff104eacb831738e61d54855a3259b37" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Halo::sync </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Espera pela conclusão do init_update. </p>
+<p>O método invoca a primitiva MPI_Wait a fim de bloquear o processo e garantir a conclusão do MPI_Irecv, disparado pelo init_update. </p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="halo_8h_source.html">halo.h</a></li>
+<li>src/mesh2d/ghost_zones/halo.cpp</li>
+</ul>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Funções</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address style="text-align: right;"><small>Gerado em Mon Jun 7 20:54:49 2010 para poisson_2d por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
+</body>
+</html>

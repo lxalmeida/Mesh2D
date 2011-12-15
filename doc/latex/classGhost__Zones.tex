@@ -1,0 +1,73 @@
+\hypertarget{classGhost__Zones}{
+\section{Referência da Classe Ghost\_\-Zones}
+\label{classGhost__Zones}\index{Ghost\_\-Zones@{Ghost\_\-Zones}}
+}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGhost__Zones_afabe1aca266df8a6997600b42f507f83}{Ghost\_\-Zones} (int m, int n, \hyperlink{classTopology}{Topology} \&topology, int num\_\-ghost\_\-zones)
+\begin{DoxyCompactList}\small\item\em Construtor das Ghost Zones. \item\end{DoxyCompactList}\item 
+\hypertarget{classGhost__Zones_a51333ce16990a9111841387991a83339}{
+void {\bfseries init\_\-halos} (void)}
+\label{classGhost__Zones_a51333ce16990a9111841387991a83339}
+
+\item 
+\hypertarget{classGhost__Zones_a67e907bca0f6dcefe1c5caae41e3740c}{
+void {\bfseries update} (void)}
+\label{classGhost__Zones_a67e907bca0f6dcefe1c5caae41e3740c}
+
+\item 
+\hypertarget{classGhost__Zones_a99d884e0cce340a79a16fd41a15c24d0}{
+void {\bfseries sync} (void)}
+\label{classGhost__Zones_a99d884e0cce340a79a16fd41a15c24d0}
+
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGhost__Zones_a00cb4da5a6bb10d855bdc65012bc1385}{
+\hyperlink{classHalo}{Halo} $\ast$ {\bfseries left}}
+\label{classGhost__Zones_a00cb4da5a6bb10d855bdc65012bc1385}
+
+\item 
+\hypertarget{classGhost__Zones_afef683ed6a12218caa0d1c9fd88033e2}{
+\hyperlink{classHalo}{Halo} $\ast$ {\bfseries right}}
+\label{classGhost__Zones_afef683ed6a12218caa0d1c9fd88033e2}
+
+\item 
+\hypertarget{classGhost__Zones_a92f70f6e09253c12996dbc8cf4064bb9}{
+\hyperlink{classHalo}{Halo} $\ast$ {\bfseries bottom}}
+\label{classGhost__Zones_a92f70f6e09253c12996dbc8cf4064bb9}
+
+\item 
+\hypertarget{classGhost__Zones_ae0bbbc81f8067f9b854fe35de1214031}{
+\hyperlink{classHalo}{Halo} $\ast$ {\bfseries top}}
+\label{classGhost__Zones_ae0bbbc81f8067f9b854fe35de1214031}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Construtores \& Destrutores}
+\hypertarget{classGhost__Zones_afabe1aca266df8a6997600b42f507f83}{
+\index{Ghost\_\-Zones@{Ghost\_\-Zones}!Ghost\_\-Zones@{Ghost\_\-Zones}}
+\index{Ghost\_\-Zones@{Ghost\_\-Zones}!Ghost_Zones@{Ghost\_\-Zones}}
+\subsubsection[{Ghost\_\-Zones}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\_\-Zones::Ghost\_\-Zones (int {\em m}, \/  int {\em n}, \/  {\bf Topology} \& {\em topology}, \/  int {\em num\_\-ghost\_\-zones})}}
+\label{classGhost__Zones_afabe1aca266df8a6997600b42f507f83}
+
+
+Construtor das Ghost Zones. 
+
+Essa classe faz a amarração das Halos de um subdomínio, sendo responsável pela instanciações desses objetos. As Halos podem ou não estarem sobrepostas com vizinhos. Se não estiverem, as informações do vizinho não são informadas à respectiva \hyperlink{classHalo}{Halo}. A não-\/sobreposição acontece quando um \hyperlink{classHalo}{Halo} é externa com relação a todo domínio. Por exemplo, a borda mais a esquerda de todo domínio não possui vizinho, mas mesmo assim há uma \hyperlink{classHalo}{Halo} ao lado dessa borda. Isso acontece para todas as bordas.
+
+
+\begin{DoxyParams}{Parâmetros}
+\item[\mbox{$\leftarrow$} {\em m}]Número de linhas do subdomínio. \item[\mbox{$\leftarrow$} {\em n}]Número de colunas do subdomínio. \item[\mbox{$\leftarrow$} {\em topology}]Topologia da execução. \item[\mbox{$\leftarrow$} {\em num\_\-ghost\_\-zones}]Número de regiões de sobreposição. \end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos:\begin{DoxyCompactItemize}
+\item 
+include/ghost\_\-zones.h\item 
+src/mesh2d/ghost\_\-zones/ghost\_\-zones.cpp\end{DoxyCompactItemize}
